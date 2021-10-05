@@ -22,34 +22,14 @@ pip3 install -r requirements.txt
 cd  Word2vec
 python predata.py
 ```
-
-
-## Datasets
-Corresponding SMILES sequences are provided in the four directories respectively according to different purposes.
-We used [SMILES enumeration](https://github.com/Ebjerrum/SMILES-enumeration) to prepare the sequences.
-The sequences are then converted to tokens during data prepocessing. The code used for tokenization is based on the [smiles_tokenizer](https://github.com/topazape/LSTM_Chem/blob/master/lstm_chem/utils/smiles_tokenizer.py) module in LSTM_Chem.  
-Before preliminary training, the sequences can be preprocessed by running:
+## Train new GCVec 
 ```
-python pre_data.py
+python ./Train new GCVec/embedding-model-tusubaki-celegans.py --model ./Train new GCVec/embedding-32dim-XGB.json
 ```
-After preparing the preliminary data, the sequences used for transfer learning can be preprocessed by running:
+## Trained GCVec application
+After taining the new GCVec, it will generate two trained model files, in this example, the generated two trained model files are "embedding-celegans-32dim-XGB.pkl" and "embedding-celegans-32dim-XGB-newmodel.pkl", copy these two files to ./Trained GCVec application, then you can utilize the trained GCVec to predict new drug-target interactions, in this example, the trained GCVec model will be used to predict the test set of celegans dataset.
 ```
-python pre_data_tl.py
+cd ./Trained GCVec application
+python embedding-celegans-test.py
 ```
 
-## Basic use
-To train the preliminary model:
-```
-python model.py
-```
-To perform transfer learning:
-```
-python tl.py
-```
-To generate SMILES sequences:
-```
-python generate.py
-```
-
-## Experiments
-The SMILES sequences were generated at random, so all the generated sequences were deposited in the four directories according to different purposes.
