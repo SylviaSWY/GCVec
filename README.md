@@ -36,4 +36,4 @@ python embedding-celegans-test.py
 The process of other section in this paper follow the above process: Word2vec to generate vectors for drugs and proteins ---> Train new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
 
 ## Supplementary notes for Datasets/Challenging dataset
-Due to the raw file is bigger than the upload limitation, the whole dataset can be download from website "https://www.bindingdb.org/bind/chemsearch/marvin/SDFdownload.jsp?all_download=yes"
+Due to the raw file is bigger than the upload limitation, the whole dataset can be downloaded from website "https://www.bindingdb.org/bind/chemsearch/marvin/SDFdownload.jsp?all_download=yes"
