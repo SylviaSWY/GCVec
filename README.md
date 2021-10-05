@@ -18,8 +18,10 @@ We propose GCVec for the first time. GCVec is an innovative virtual screening mo
 pip3 install -r requirements.txt
 ```
 ## Word2vec to generate low-dimensional vectors of SMILES of drugs and amino acid sequences of proteins
-cd the 
-
+```
+cd  Word2vec
+python predata.py
+```
 
 
 ## Datasets
