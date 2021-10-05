@@ -33,5 +33,5 @@ cd ./Trained GCVec application
 python embedding-celegans-test.py
 ```
 ## Other sections in the paper
-The process of other section in this paper follow the above process: Word2vec to generate vectors for drugs and proteins ---> Tain new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
+The process of other section in this paper follow the above process: Word2vec to generate vectors for drugs and proteins ---> Train new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
 
