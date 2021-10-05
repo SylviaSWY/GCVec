@@ -12,7 +12,7 @@ We propose GCVec for the first time. GCVec is an innovative virtual screening mo
 * tensorflow
 * xgboost
 
-## Use guidence
+## User guidence
 ## Prepare environment
 ```
 pip3 install -r requirements.txt
