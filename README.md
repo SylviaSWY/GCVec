@@ -41,4 +41,5 @@ All datasets concerned in this article can be downloaded from zenodo website "ht
 
 ## References
 [1] Zhou, Z.; Feng, J. In Deep forest: towards an alternative to deep neural networks, International Joint Conference on Artificial Intelligence, 2017; pp 3553-3559.
+
 [2] Zhang, Y. F.;  Wang, X.;  Kaushik, A. C.;  Chu, Y.;  Shan, X.;  Zhao, M. Z.;  Xu, Q.; Wei, D. Q., SPVec: A Word2vec-Inspired Feature Representation Method for Drug-Target Interaction Prediction. Front Chem 2019, 7, 895.
