@@ -127,8 +127,9 @@ if __name__=='__main__':
     try:
         prot_embeddings = Word2vec.feature_embeddings_protein(32)
         drug_embeddings = Word2vec.feature_embeddings_smiles(32)
-        prot_embeddings['proteinseq']=protein_seq
-        drug_embeddings['smiles']=drug_Smi
+        #prot_embeddings['proteinseq']=protein_seq
+        #drug_embeddings['smiles']=drug_Smi
+        
         prot_embeddings.to_csv('celegans-protein-embeddings-32dim',index=False,sep='\t')
         drug_embeddings.to_csv('celegans-drug-embeddings-32dim',index=False,sep='\t')
     except ImportError:
