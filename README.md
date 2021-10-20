@@ -31,7 +31,7 @@ python ./"Train new GCVec"/embedding-model-tusubaki-celegans.py --model ./"Train
 ## Trained GCVec application
 After taining the new GCVec, it will generate two trained model files, in this example, the generated two trained model files are "embedding-celegans-32dim-XGB.pkl" and "embedding-celegans-32dim-XGB-newmodel.pkl", copy these two files to ./Trained GCVec application, then you can utilize the trained GCVec to predict new drug-target interactions, in this example, the trained GCVec model will be used to predict the test set of celegans dataset.
 ```
-cd ./Trained GCVec application
+cd ./"Trained GCVec application"
 python embedding-celegans-test.py
 ```
 ## Other sections in the paper
