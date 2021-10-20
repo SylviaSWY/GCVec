@@ -19,13 +19,13 @@ from PIL import Image
 
 
 
-protein_embeddings_train = pd.read_csv("celegans-protein-embeddings-32dim.csv").iloc[:5222]
+protein_embeddings_train = pd.read_csv("celegans-protein-embeddings-32dim.csv",sep="\t").iloc[:5222]
 length_train = len(protein_embeddings_train["mean_ci_2"])
 
 protein_embeddings_train = [protein_embeddings_train.loc[i].values for i in range(length_train)]
 
 
-drug_embeddings_train = pd.read_csv("celegans-drug-embeddings-32dim.csv").iloc[:5222]
+drug_embeddings_train = pd.read_csv("celegans-drug-embeddings-32dim.csv",sep="\t").iloc[:5222]
 drug_embeddings_train = [drug_embeddings_train.loc[i].values for i in range(length_train)]
 
 
@@ -40,13 +40,13 @@ labels_train = pd.read_csv("celegans-data-pre.csv")["label"][:5222]
 
 
 
-protein_embeddings_test = pd.read_csv("celegans-protein-embeddings-32dim.csv").iloc[5222:]
+protein_embeddings_test = pd.read_csv("celegans-protein-embeddings-32dim.csv",sep="\t").iloc[5222:]
 protein_embeddings_test = protein_embeddings_test.reset_index(drop=True)
 length_test = len(protein_embeddings_test["mean_ci_2"])
 protein_embeddings_test = [protein_embeddings_test.loc[i].values for i in range(length_test)]
 
 
-drug_embeddings_test = pd.read_csv("celegans-drug-embeddings-32dim.csv").iloc[5222:]
+drug_embeddings_test = pd.read_csv("celegans-drug-embeddings-32dim.csv",sep="\t").iloc[5222:]
 drug_embeddings_test = drug_embeddings_test.reset_index(drop=True)
 drug_embeddings_test = [drug_embeddings_test.loc[i].values for i in range(length_test)]
 
