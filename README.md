@@ -24,9 +24,9 @@ cd  Word2vec
 python predata.py
 ```
 ## Train new GCVec 
-(to train the GCVec model using celegans dataset as an example)
+(use the above generated processed data to train the GCVec model as an example, put the needed data in the directory where your teminal is)
 ```
-python ./Train new GCVec/embedding-model-tusubaki-celegans.py --model ./Train new GCVec/embedding-32dim-XGB.json
+python ./"Train new GCVec"/embedding-model-tusubaki-celegans.py --model ./"Train new GCVec"/embedding-32dim-XGB.json
 ```
 ## Trained GCVec application
 After taining the new GCVec, it will generate two trained model files, in this example, the generated two trained model files are "embedding-celegans-32dim-XGB.pkl" and "embedding-celegans-32dim-XGB-newmodel.pkl", copy these two files to ./Trained GCVec application, then you can utilize the trained GCVec to predict new drug-target interactions, in this example, the trained GCVec model will be used to predict the test set of celegans dataset.
