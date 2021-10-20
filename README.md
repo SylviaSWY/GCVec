@@ -35,5 +35,5 @@ python embedding-celegans-test.py
 ## Other sections in the paper
 The process of other section in this paper follow the above process: Word2vec to generate vectors for drugs and proteins ---> Train new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
 
-## Supplementary notes for Datasets/Challenging dataset
-Due to the raw file is bigger than the upload limitation, the whole dataset can be downloaded from website "https://www.bindingdb.org/bind/chemsearch/marvin/SDFdownload.jsp?all_download=yes"
+## Supplementary notes for all Datasets
+All datasets concerned in this article can be downloaded from zenodo website "https://doi.org/10.5281/zenodo.5584700", the downloaded file contains all raw data and processed data concerned in the article "GCVec: a new screening model towards the CD47 inhibitors exploration", this file contain 6 sub-files, namely GCVec——humans, GCVec——celegans, GCVec——challenging dataset, GCVec——blindly screen CD47, DS-docking CD47, GCVec——specs, respectively, fully cover all parts of the article.
