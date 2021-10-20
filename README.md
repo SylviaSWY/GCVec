@@ -18,11 +18,13 @@ We propose GCVec for the first time. GCVec is an innovative virtual screening mo
 pip3 install -r requirements.txt
 ```
 ## Word2vec to generate low-dimensional vectors of SMILES of drugs and amino acid sequences of proteins
+(to generate the low-dimensional vectors of celegans dataset as an example)
 ```
 cd  Word2vec
 python predata.py
 ```
 ## Train new GCVec 
+(to train the GCVec model using celegans dataset as an example)
 ```
 python ./Train new GCVec/embedding-model-tusubaki-celegans.py --model ./Train new GCVec/embedding-32dim-XGB.json
 ```
