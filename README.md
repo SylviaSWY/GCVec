@@ -1,5 +1,5 @@
 ## GCVec
-We propose GCVec for the first time. GCVec is an innovative virtual screening model, which utilizes Word2vec (used for natural language processing) to characterize SMILES of drugs and amino acid sequences of targets to generate low-dimensional vectors and multi-grand cascade forest classifier is used to predict whether the drug-target interaction can occur. Compared with DL, the multi-grand cascade forest classifier has the advantages of fewer hyper-parameters and can adaptively set the complexity of the model according to the scale of datasets so as to avoid the over-fitting problem of DL on small-scale datasets. In order to demonstrate the rationality and effectiveness of GCVec, we used the GCVec model to screen small molecule inhibitors of cluster of differentiation 47 (CD47). The results proved that the GCVec model is a powerful tool for the new generation of drug-target binding prediction. GCVec was constructed based on the innitial gcforest model constructed by Zhou, Z[1] with several changes and modifications. And the part that Word2vec to generate low-dimensional vectors of SMILES of drugs and amino acid sequences of proteins could be refered to in Yu Fang Zhang's[2] work with modifications. The whole process of GCVec was completed on the LINUX system based on python3.7.
+We propose GCVec for the first time. GCVec is an virtual screening model, which utilizes Word2vec (used for natural language processing) to characterize SMILES of drugs and amino acid sequences of targets to generate low-dimensional vectors and multi-grand cascade forest classifier is used to predict whether the drug-target interaction can occur. Compared with DL, this method has the advantages of fewer hyper-parameters and can adaptively set the complexity of the model according to the scale of datasets so as to avoid the over-fitting problem of DL on small-scale datasets. In order to demonstrate the rationality and effectiveness of GCVec, we used the GCVec model to screen small molecule inhibitors of cluster of differentiation 47 (CD47). The results proved that the GCVec model is a powerful tool for the new generation of drug-target binding prediction. GCVec was constructed based on the innitial gcforest model constructed by Zhou, Z[1] with several changes and modifications. And the part that Word2vec to generate low-dimensional vectors of SMILES of drugs and amino acid sequences of proteins could be refered to in Yu Fang Zhang's[2] work with modifications. The whole process of GCVec was completed on the LINUX system based on python3.7.
 
 ## Requirements:
 * argparse
@@ -24,7 +24,7 @@ cd  Word2vec
 python predata.py
 ```
 ## Train new GCVec 
-(use the above generated processed data to train the GCVec model as an example, put the needed data in the directory where your teminal is)
+(use the above generated data(low-dimensional vectors of amino acid sequences of proteins and SMILES of drugs separately) to train the GCVec model as an example, put the above needed data in the directory where your teminal is)
 ```
 python ./"Train new GCVec"/embedding-model-tusubaki-celegans.py --model ./"Train new GCVec"/embedding-32dim-XGB.json
 ```
@@ -34,11 +34,11 @@ After taining the new GCVec, it will generate two trained model files, in this e
 cd ./"Trained GCVec application"
 python embedding-celegans-test.py
 ```
-## Other sections in the paper
-The process of other section in this paper follow the above process: Word2vec to generate vectors for drugs and proteins ---> Train new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
+## General guideline for model training and application in other sections of the paper
+The process of other section in this paper just follow the instruction in the above example, and just change the input datasets, the input datasets are available at the bottom of this text: Word2vec to generate vectors for drugs and proteins ---> Train new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
 
-## Supplementary notes for all Datasets
-All datasets concerned in this article can be downloaded from zenodo website "https://doi.org/10.5281/zenodo.5584700", the downloaded file contains all raw data and processed data concerned in the article "GCVec: a new screening model towards the CD47 inhibitors exploration", this file contain 6 sub-files, namely GCVec——humans, GCVec——celegans, GCVec——challenging dataset, GCVec——blindly screen CD47, DS-docking CD47, GCVec——specs, respectively, fully cover all parts of the article.
+## Supplementary notes for all Datasets used in the paper
+All datasets concerned in this article can be downloaded from zenodo website "https://doi.org/10.5281/zenodo.5584700", the downloaded file contains all raw data and processed data concerned in the article "GcForest-based Compound-Protein Interaction Model and Its Application in Discovering Small-Molecule Drugs Targeting CD47 ", this file contain 6 sub-files, namely GCVec——humans, GCVec——celegans, GCVec——challenging dataset, GCVec——latest BindingDB, DS-docking CD47, GCVec——specs, respectively, fully cover all parts of the article.
 
 
 ## References
