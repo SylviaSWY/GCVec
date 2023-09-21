@@ -38,7 +38,7 @@ python embedding-celegans-test.py
 The process of other section in this paper just follow the instruction in the above example, and just change the input datasets, the input datasets are available at the bottom of this text: Word2vec to generate vectors for drugs and proteins ---> Train new GCVec with the prepared Datasets ---> Trained GCVec to predict new drug-target interactions. 
 
 ## Supplementary notes for all Datasets used in the paper
-All datasets concerned in this article can be downloaded from zenodo website "https://doi.org/10.5281/zenodo.5584700", the downloaded file contains all raw data and processed data concerned in the article "GcForest-based Compound-Protein Interaction Model and Its Application in Discovering Small-Molecule Drugs Targeting CD47 ", this file contain 6 sub-files, namely GCVec——humans, GCVec——celegans, GCVec——challenging dataset, GCVec——latest BindingDB, GCVec——specs, respectively, fully cover all parts of the article.
+All datasets concerned in this article can be downloaded from zenodo website "https://doi.org/10.5281/zenodo.5584700", the downloaded file contains all raw data and processed data concerned in the article "GcForest-based Compound-Protein Interaction Model and Its Application in Discovering Small-Molecule Drugs Targeting CD47 ", this file contain 5 sub-files, namely GCVec——humans, GCVec——celegans, GCVec——challenging dataset, GCVec——latest BindingDB, GCVec——specs, respectively, fully cover all parts of the article.
 
 
 ## References
